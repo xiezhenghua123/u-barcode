@@ -1,0 +1,70 @@
+{
+  "name": "u-barcode",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "packageManager": "pnpm@9.3.0",
+  "auth": "xiezhenghua123",
+  "description": "A component for generating barcode in uniapp",
+  "files": [
+    "dist",
+    "/types/index.d.ts"
+  ],
+  "main": "./dist/components/u-barcode/u-barcode.cjs.js",
+  "module": "./dist/components/u-barcode/u-barcode.es.js",
+  "types": "./types/index.d.ts",
+  "exports": {
+    "types": "./types",
+    "import": "./dist/components/u-barcode/u-barcode.es.js",
+    "require": "./dist/components/u-barcode/u-barcode.cjs.js"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "prepare": "husky",
+    "lint": "eslint --fix"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@dcloudio/types": "^3.4.14",
+    "@eslint/js": "^9.17.0",
+    "@rollup/plugin-commonjs": "^28.0.2",
+    "conventional-changelog-cli": "^5.0.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^9.17.0",
+    "eslint-plugin-vue": "^9.32.0",
+    "globals": "^15.14.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.11",
+    "rollup-plugin-copy": "^3.5.0",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "^8.18.2",
+    "vite": "^6.0.1"
+  },
+  "dependencies": {
+    "jsbarcode": "^3.11.6",
+    "vite-plugin-dts": "^4.4.0",
+    "vue": "^3.5.13"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiezhenghua123/u-barcode.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xiezhenghua123/u-barcode.git/issues"
+  },
+  "keywords": [
+    "uniapp",
+    "barcode"
+  ],
+  "lint-staged": {
+    "*.{ts,vue,js}": [
+      "pnpm run lint"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
