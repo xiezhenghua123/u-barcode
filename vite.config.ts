@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import commonJs from '@rollup/plugin-commonjs'
 import copy from 'rollup-plugin-copy'
 import dts from 'vite-plugin-dts'
+import zipPack from "vite-plugin-zip-pack";
 
 // 从package.json中读取libName
 import packageJson from './package.json'
@@ -28,7 +29,8 @@ export default defineConfig({
       insertTypesEntry: true,
       outDir: './types',
       include: [`src/${libName}/components/${libName}/**/*.ts`, 'types/*.d.ts']
-    })
+    }),
+    zipPack()
   ],
   build: {
     lib: {
