@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/xiezhenghua123/u-barcode/compare/v1.0.2...v1.0.3) (2025-01-04)
+
+
+### Bug Fixes
+
+* 生成zip打包文件 ([03bb1a3](https://github.com/xiezhenghua123/u-barcode/commit/03bb1a38656ea7e34c213addec3f754ab4343c76))
+
 ## [1.0.2](https://github.com/xiezhenghua123/u-barcode/compare/v1.0.1...v1.0.2) (2025-01-04)
 
 
