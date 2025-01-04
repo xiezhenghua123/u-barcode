@@ -18,7 +18,7 @@ export default {
    [
     '@semantic-release/github',
     {
-      assets: 'dist/**' // 发布到 GitHub，发布的文件
+      assets: 'dist' // 发布到 GitHub，发布的文件
     }
    ],
    [
