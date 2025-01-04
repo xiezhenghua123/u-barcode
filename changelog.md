@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/xiezhenghua123/u-barcode/compare/v1.0.3...v1.0.4) (2025-01-04)
+
+
+### Bug Fixes
+
+* 修复dist包中版本号的问题 ([b0ecacb](https://github.com/xiezhenghua123/u-barcode/commit/b0ecacb52ccfa8445f8300c57c3eef663649a092))
+
 ## [1.0.3](https://github.com/xiezhenghua123/u-barcode/compare/v1.0.2...v1.0.3) (2025-01-04)
 
 
