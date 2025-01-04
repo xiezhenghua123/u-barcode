@@ -6,7 +6,45 @@ import zipPack from "vite-plugin-zip-pack";
 
 // 从package.json中读取libName
 import packageJson from './package.json'
+import fs from 'fs'
+import path from 'path'
 const libName = packageJson.name
+
+// 修改src\u-barcode\package.json中的version、name、repository、author、license、keywords、description
+const changePackage = () => {
+  return {
+    name: 'change-package',
+    writeBundle() {
+      const version = packageJson.version
+      const repository = packageJson.repository
+      const auth = packageJson.auth
+      const license = packageJson.license
+      const keywords = packageJson.keywords
+      const description = packageJson.description
+      const pathStr = path.resolve(__dirname, `src/${libName}/package.json`)
+      let data:string
+      try {
+        data = fs.readFileSync(pathStr, 'utf-8')
+        const json = JSON.parse(data)
+        json.version = version
+        json.name = libName
+        json.id = libName
+        json.displayName = libName
+        json.repository = repository
+        json.auth = auth
+        json.license = license
+        json.keywords = keywords
+        json.description = description
+        fs.writeFileSync(pathStr,
+          JSON.stringify(json, null, 2)
+        )
+      }
+      catch (e) {
+        console.log(e)
+      }
+    }
+  }
+}
 
 export default defineConfig({
   plugins: [
@@ -30,6 +68,7 @@ export default defineConfig({
       outDir: './types',
       include: [`src/${libName}/components/${libName}/**/*.ts`, 'types/*.d.ts']
     }),
+    changePackage(),
     zipPack()
   ],
   build: {

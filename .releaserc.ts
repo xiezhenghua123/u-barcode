@@ -16,6 +16,12 @@ export default {
      }
    ],  // 发布到NPM
    [
+    '@semantic-release/exec',
+    {
+      prepareCmd: 'pnpm run build', // 发布前执行的命令
+    }
+   ],
+   [
     '@semantic-release/github',
     {
       assets: 'dist-zip' // 发布到 GitHub，发布的文件
