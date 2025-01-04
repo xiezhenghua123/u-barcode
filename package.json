@@ -1,7 +1,7 @@
 {
   "name": "u-barcode",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "packageManager": "pnpm@9.3.0",
   "auth": "xiezhenghua123",

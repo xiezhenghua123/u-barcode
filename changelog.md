@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/xiezhenghua123/u-barcode/compare/v1.0.0...v1.0.1) (2025-01-04)
+
+
+### Bug Fixes
+
+* 删除多余依赖包以及修改realease路径 ([cf18933](https://github.com/xiezhenghua123/u-barcode/commit/cf189330a1f03072f77e7dda6d839e54fc2bea1f))
+
 # 1.0.0 (2025-01-04)
 
 
