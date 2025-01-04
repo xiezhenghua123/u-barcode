@@ -15,7 +15,12 @@ export default {
        npmPublish: false // 默认是 true，设置为 false 不会发布到 NPM
      }
    ],  // 发布到NPM
-   '@semantic-release/github',
+   [
+    '@semantic-release/github',
+    {
+      assets: 'dist/**' // 发布到 GitHub，发布的文件
+    }
+   ],
    [
      '@semantic-release/git',
      {
