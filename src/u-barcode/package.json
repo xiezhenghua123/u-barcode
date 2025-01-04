@@ -1,12 +1,16 @@
 {
-  "id": "tki-barcode-es",
-  "displayName": "tki-barcode-es",
-  "version": "1.0.0",
-  "description": "tki-barcode-es",
+  "id": "u-barcode",
+  "displayName": "u-barcode",
+  "version": "1.0.4",
+  "description": "A component for generating barcode in uniapp",
   "keywords": [
-    "tki-barcode-es"
-],
-  "repository": "",
+    "uniapp",
+    "barcode"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiezhenghua123/u-barcode.git"
+  },
   "engines": {
     "HBuilderX": "^3.1.0"
   },
@@ -79,5 +83,8 @@
         }
       }
     }
-  }
+  },
+  "name": "u-barcode",
+  "auth": "xiezhenghua123",
+  "license": "ISC"
 }

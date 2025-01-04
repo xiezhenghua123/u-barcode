@@ -27,9 +27,6 @@ jobs:
           run_install: true
           version: 9.3.0
 
-      - name: Build project
-        run: pnpm run build
-
       - name: Release
         env: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
