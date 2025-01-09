@@ -23,4 +23,5 @@
     "typeRoots": ["node_modules/@types", "node_modules/@dcloudio/types"],
   },
   "include": ["src", "lib", "types/*.d.ts", ],
+  "exclude": ["node_modules", "dist", "example"]
 }
