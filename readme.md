@@ -30,8 +30,23 @@ pnpm run build
 
 **方法：**
 
-| 方法名称                                    | 描述                                      |
-| ------------------------------------------- | ----------------------------------------- |
-| makeCode(val: string, otherOptions: object) | 生成条形码（这里会覆盖props的里面的参数） |
-| clearCode()                                 | 清空条形码                                |
-| saveCode()                                  | 将条形码图片保存到系统相册                |
+| 方法名称                                    | 描述                                                                 |
+| ------------------------------------------- | -------------------------------------------------------------------- |
+| makeCode(val: string, otherOptions: object) | 生成条形码（这里会覆盖props的里面的参数）                            |
+| clearCode()                                 | 清空条形码                                                           |
+| saveCode({fileName: string})                | 非H5端将条形码图片保存到系统相册，H5端下载图片（fileName适用于H5端） |
+
+### 调试
+
+```powershell
+cd ./example
+pnpm i
+pnpm run dev:h5
+```
+
+### 构建
+
+```
+pnpm i
+pnpm run build
+```
