@@ -1,3 +1,20 @@
+# [1.1.0](https://github.com/xiezhenghua123/u-barcode/compare/v1.0.4...v1.1.0) (2025-01-09)
+
+
+### Bug Fixes
+
+* 修复打包产物packge.json中repository，方便上传uniapp插件库 ([02adc16](https://github.com/xiezhenghua123/u-barcode/commit/02adc16db49c08a95890810dda0862a20546d740))
+
+
+### Features
+
+* 新增H5端保存图片 ([4d646ef](https://github.com/xiezhenghua123/u-barcode/commit/4d646ef2a09c21600ac36d81bc052598710577ac))
+
+
+### Performance Improvements
+
+* 新增开发模式调试 ([45d3161](https://github.com/xiezhenghua123/u-barcode/commit/45d3161e23d96d87448fbb4d6c20d25073635c17))
+
 ## [1.0.4](https://github.com/xiezhenghua123/u-barcode/compare/v1.0.3...v1.0.4) (2025-01-04)
 
 
