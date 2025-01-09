@@ -137,8 +137,9 @@ export default {
         this.barcodeInstance = null;
       }
     },
-    saveCode() {
+    saveCode(params) {
       if (this.result != "") {
+        // #ifndef H5
         // eslint-disable-next-line no-undef
         uni.saveImageToPhotosAlbum({
           filePath: this.result,
@@ -151,6 +152,14 @@ export default {
             });
           },
         });
+        // #endif
+        // #ifdef H5
+        const fileName = params && params.fileName;
+        const a = document.createElement("a");
+        a.href = this.result;
+        a.download = fileName || `barcode_${new Date().getTime()}.png`;
+        a.click();
+        // #endif
       }
     },
     _result(res) {

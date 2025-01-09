@@ -30,7 +30,7 @@ const changePackage = () => {
         json.name = libName
         json.id = libName
         json.displayName = libName
-        json.repository = repository
+        json.repository = repository.url.replace('git+', '')
         json.auth = auth
         json.license = license
         json.keywords = keywords
