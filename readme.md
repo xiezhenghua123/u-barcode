@@ -2,10 +2,6 @@
 
 uniapp条形码组件，利用jsbarcode改造
 
-```powershell
-pnpm run build
-```
-
 ### API
 
 **属性：**
