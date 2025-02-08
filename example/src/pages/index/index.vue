@@ -10,7 +10,7 @@
 
 <script setup lang="ts">
 import { onMounted, ref } from "vue";
-import uBarcode from "../../../../src/u-barcode/components/u-barcode/u-barcode.vue";
+import uBarcode from "@root/src/u-barcode/components/u-barcode/u-barcode.vue";
 
 const barcodeId = ref("barcode");
 const barcodeValue = ref("");
