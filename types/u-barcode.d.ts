@@ -9,9 +9,9 @@ declare class UniBarcode {
     canvasImg?: string;
     constructor(componentContext: ComponentPublicInstance, ctxId: string, options: UBarcodeOptions);
     getCanvasWidthAndHeight(): {
-        width: number | undefined;
-        height: number | undefined;
-    };
+        width: number;
+        height: number;
+    } | null;
     getImgPath(): string | undefined;
     clear(): void;
     private render;

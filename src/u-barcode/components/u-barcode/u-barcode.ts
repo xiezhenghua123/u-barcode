@@ -4,7 +4,7 @@ import type {
   Encoding,
   BarcodeData
 } from 'jsbarcode/src/barcodes'
-import { ComponentPublicInstance } from 'vue'
+import type { ComponentPublicInstance } from 'vue'
 
 const defaultOptions: UBarcodeOptions = {
   format: 'CODE128',
@@ -72,9 +72,13 @@ class UniBarcode {
     this.render(this.options as Required<UBarcodeOptions>, this.encodeData)
   }
   getCanvasWidthAndHeight() {
-    return {
-      width: this.encodeData?.width,
-      height: this.encodeData?.height
+    if (this.encodeData) {
+      return {
+        width: this.encodeData.width,
+        height: this.encodeData.height
+      }
+    } else {
+      return null
     }
   }
   getImgPath() {

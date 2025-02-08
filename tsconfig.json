@@ -20,8 +20,8 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
-    "typeRoots": ["node_modules/@types", "node_modules/@dcloudio/types"],
+    "types": ["@dcloudio/types"],
   },
-  "include": ["src", "lib", "types/*.d.ts", ],
+  "include": ["src/**/*.vue", "lib", "types/*.d.ts", "src/**/*.ts", "src/**/*.d.ts"],
   "exclude": ["node_modules", "dist", "example"]
 }

@@ -30,8 +30,12 @@
   </view>
 </template>
 
-<script>
+<script lang="ts">
 import UniBarCode from "./u-barcode.ts";
+import type { UBarcodeOptions }  from 'jsbarcode/src/barcodes'
+
+let barcodeInstance: UniBarCode | null = null;
+
 export default {
   name: "UBarcode",
   props: {
@@ -76,7 +80,6 @@ export default {
     },
   },
   data() {
-    this.barcodeInstance = null;
     return {
       result: "",
       canvasWidth: 500,
@@ -86,13 +89,13 @@ export default {
     };
   },
   mounted() {
-    this.makeCode();
+    this.makeCode(this.val, this.options);
   },
   methods: {
-    async makeCode(val, otherOptions) {
+    async makeCode(val: string, otherOptions: UBarcodeOptions) {
       await this.$nextTick();
-      let options = {},
-        newOptions = this.options;
+      let options: UBarcodeOptions = {},
+        newOptions: UBarcodeOptions = this.options;
       // 合并参数
       if (otherOptions) {
         newOptions = otherOptions;
@@ -125,19 +128,21 @@ export default {
           options.fontSize = uni.rpx2px(options.fontSize);
         }
       }
-      this.barcodeInstance = new UniBarCode(this, this.cid, options);
-      const { width, height } = this.barcodeInstance.getCanvasWidthAndHeight();
-      this.canvasHeight = height;
-      this.canvasWidth = width;
+      barcodeInstance = new UniBarCode(this, this.cid, options);
+      const data = barcodeInstance.getCanvasWidthAndHeight();
+      if(data) {
+        this.canvasWidth = data.width;
+        this.canvasHeight = data.height;
+      }
     },
     clearCode() {
       this._result("");
-      if(this.barcodeInstance) {
-        this.barcodeInstance.clear();
-        this.barcodeInstance = null;
+      if(barcodeInstance) {
+        barcodeInstance.clear();
+        barcodeInstance = null;
       }
     },
-    saveCode(params) {
+    saveCode(params?: { fileName?: string }) {
       if (this.result != "") {
         // #ifndef H5
         // eslint-disable-next-line no-undef
@@ -162,7 +167,7 @@ export default {
         // #endif
       }
     },
-    _result(res) {
+    _result(res: string) {
       this.isShow = this.show;
       this.result = res;
       this.$emit("result", res);
