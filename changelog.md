@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/xiezhenghua123/u-barcode/compare/v1.1.0...v1.1.1) (2025-02-08)
+
+
+### Performance Improvements
+
+* 开发环境，组件ts化 ([0bd8531](https://github.com/xiezhenghua123/u-barcode/commit/0bd8531340b2639170a77f7fce660625a655efab))
+
 # [1.1.0](https://github.com/xiezhenghua123/u-barcode/compare/v1.0.4...v1.1.0) (2025-01-09)
 
 
