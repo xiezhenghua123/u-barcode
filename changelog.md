@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/xiezhenghua123/u-barcode/compare/v1.1.1...v1.1.2) (2025-02-26)
+
+
+### Performance Improvements
+
+* 修复开发运行到小程序时，路径报错问题 ([1049087](https://github.com/xiezhenghua123/u-barcode/commit/104908732e9fa764fc1c42a2332095fcd071c356))
+
 ## [1.1.1](https://github.com/xiezhenghua123/u-barcode/compare/v1.1.0...v1.1.1) (2025-02-08)
 
 
