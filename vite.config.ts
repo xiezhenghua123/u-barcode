@@ -104,7 +104,6 @@ export default defineConfig({
     },
     emptyOutDir: true,
     rollupOptions: {
-      external: ['vue'],
       output: [
         {
           dir: `dist/${libName}/components/${libName}`,
